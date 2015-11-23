@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="C:/Users/Timothy/Documents/CEC330L/Final_Prj/Final_Prj.xpr">
+<Project Version="7" Minor="5" Path="C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="e7a12b09ff494ce3bb1f6af8657c18a9"/>
@@ -25,6 +25,13 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/top_module.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/led_pwm.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
