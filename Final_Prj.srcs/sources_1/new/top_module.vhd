@@ -5,7 +5,7 @@
 -- Create Date: 11/22/2015 02:12:21 PM
 -- Design Name: 
 -- Module Name: top_module - Behavioral
--- Project Name: 
+-- Project Name: Final Project
 -- Target Devices: 
 -- Tool Versions: 
 -- Description: 
