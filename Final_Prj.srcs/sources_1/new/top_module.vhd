@@ -35,7 +35,7 @@ entity top_module is
     Port (led : out STD_LOGIC_VECTOR (15 downto 0);
           clk : in STD_LOGIC;
           ACCEL_X_OUT    : out STD_LOGIC_VECTOR (7 downto 0);
-          ACCEL_Y_OUT    : out STD_LOGIC_VECTOR (7 downto 0))
+          ACCEL_Y_OUT    : out STD_LOGIC_VECTOR (7 downto 0)
           );
 end top_module;
 
