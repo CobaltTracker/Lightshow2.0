@@ -54,10 +54,13 @@ port
 end component;
 component led_pwm
 Port (CLK : in STD_LOGIC;
-      PW : in STD_LOGIC_VECTOR (15 downto 0);
+      PW : in STD_LOGIC_VECTOR (7 downto 0);
       PWM_OUT : out STD_LOGIC
       );
 end component;
+
+--sigals for pwm
+signal pwm_out : std_logic;
 
 -- Self-blocking reset counter constants
 constant ACC_RESET_PERIOD_US : integer := 10;
@@ -125,6 +128,14 @@ port map
 
 ACCEL_X_OUT <= ACCEL_X (11 downto 4);
 ACCEL_Y_OUT <= ACCEL_Y (11 downto 4);
+
+--port map for pwm
+pwm : pwm_led
+port map
+    (CLK => clk,
+     PW => ACCEL_Y_OUT,
+     PWM_OUT => pwm_out
+     );
 
 
 end Behavioral;
