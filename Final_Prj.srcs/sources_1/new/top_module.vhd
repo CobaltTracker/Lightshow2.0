@@ -1,24 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 11/22/2015 02:12:21 PM
--- Design Name: 
--- Module Name: top_module - Behavioral
--- Project Name: Final Project
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -34,8 +13,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity top_module is
     Port (led : out STD_LOGIC_VECTOR (15 downto 0);
           clk : in STD_LOGIC;
-          ACCEL_X_OUT    : out STD_LOGIC_VECTOR (7 downto 0);
-          ACCEL_Y_OUT    : out STD_LOGIC_VECTOR (7 downto 0)
+          aclMISO : in STD_LOGIC;
+          aclMOSI : out STD_LOGIC;
+          aclSCK : out STD_LOGIC;
+          aclSS : out STD_LOGIC;
+          aclInt1 : out STD_LOGIC;
+          alInt2 : out STD_LOGIC
           );
 end top_module;
 
@@ -69,9 +52,48 @@ port
 
 );
 end component;
+component led_pwm
+Port (CLK : in STD_LOGIC;
+      PW : in STD_LOGIC_VECTOR (15 downto 0);
+      PWM_OUT : out STD_LOGIC
+      );
+end component;
+
+-- Self-blocking reset counter constants
+constant ACC_RESET_PERIOD_US : integer := 10;
+constant ACC_RESET_IDLE_CLOCKS   : integer := ((ACC_RESET_PERIOD_US*1000)/(1000000000/SYSCLK_FREQUENCY_HZ));
+
+signal  ACCEL_X    : STD_LOGIC_VECTOR (11 downto 0);
+signal  ACCEL_Y    : STD_LOGIC_VECTOR (11 downto 0);
+signal  ACCEL_Z    : STD_LOGIC_VECTOR (11 downto 0);
+signal  ACCEL_TMP_OUT    : STD_LOGIC_VECTOR (11 downto 0);
+signal  ACCEL_X_OUT    : STD_LOGIC_VECTOR (7 downto 0);
+signal  ACCEL_Y_OUT    : STD_LOGIC_VECTOR (7 downto 0);
+
+signal Data_Ready : STD_LOGIC;
+
+-- Self-blocking reset counter
+signal cnt_acc_reset : integer range 0 to (ACC_RESET_IDLE_CLOCKS - 1):= 0;
+signal RESET_INT: std_logic;
 
 begin
 
+-- Create the self-blocking reset counter
+COUNT_RESET: process(mclk, cnt_acc_reset, RESET)
+begin
+   if clk'EVENT and clk = '1' then
+      if (RESET = '1') then
+         cnt_acc_reset <= 0;
+         RESET_INT <= '1';
+      elsif cnt_acc_reset = (ACC_RESET_IDLE_CLOCKS - 1) then
+         cnt_acc_reset <= (ACC_RESET_IDLE_CLOCKS - 1);
+         RESET_INT <= '0';
+      else
+         cnt_acc_reset <= cnt_acc_reset + 1;
+         RESET_INT <= '1';
+      end if;
+   end if;
+end process COUNT_RESET;
 
 --port map for accelerometer
 ADXL_Control: ADXL362Ctrl
@@ -84,7 +106,7 @@ generic map
 )
 port map
 (
- SYSCLK     => mclk, 
+ SYSCLK     => clk, 
  RESET      => RESET_INT, 
  
  -- Accelerometer data signals
