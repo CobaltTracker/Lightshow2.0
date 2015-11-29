@@ -59,7 +59,7 @@ Port (CLK : in STD_LOGIC;
       );
 end component;
 
---sigals for pwm
+--signals for pwm
 signal pwm_out : std_logic;
 
 -- Self-blocking reset counter constants
@@ -136,6 +136,6 @@ port map
      PW => ACCEL_Y_OUT,
      PWM_OUT => pwm_out
      );
-
+--todo - set up logic for leds based on ACCEL_X_OUTPUT
 
 end Behavioral;
