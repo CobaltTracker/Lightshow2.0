@@ -11,6 +11,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity top_module is
+	generic (
+    SYSCLK_FREQUENCY_HZ : integer := 100000000;
+    SCLK_FREQUENCY_HZ   : integer := 1000000;
+    NUM_READS_AVG       : integer := 16;
+    UPDATE_FREQUENCY_HZ : integer := 100
+    );
     Port (led : out STD_LOGIC_VECTOR (15 downto 0);
           clk : in STD_LOGIC;
           aclMISO : in STD_LOGIC;
