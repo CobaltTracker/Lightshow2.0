@@ -18,7 +18,7 @@ entity top_module is
           aclSCK : out STD_LOGIC;
           aclSS : out STD_LOGIC;
           aclInt1 : out STD_LOGIC;
-          alInt2 : out STD_LOGIC
+          aclInt2 : out STD_LOGIC
           );
 end top_module;
 
