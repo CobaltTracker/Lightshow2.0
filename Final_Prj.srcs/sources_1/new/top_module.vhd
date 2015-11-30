@@ -11,7 +11,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity top_module is
-	generic (
+generic (
     SYSCLK_FREQUENCY_HZ : integer := 100000000;
     SCLK_FREQUENCY_HZ   : integer := 1000000;
     NUM_READS_AVG       : integer := 16;
@@ -126,10 +126,10 @@ port map
  Data_Ready => Data_Ready, 
  
  --SPI Interface Signals
- SCLK       => SCLK, 
- MOSI       => MOSI,
- MISO       => MISO, 
- SS         => SS
+ SCLK       => aclSCK, 
+ MOSI       => aclMOSI,
+ MISO       => aclMISO, 
+ SS         => aclSS
 );
 
 ACCEL_X_OUT <= ACCEL_X (11 downto 4);
