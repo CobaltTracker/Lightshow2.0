@@ -6,7 +6,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity led_pwm is
     Port (CLK : in STD_LOGIC;
-          PW : in STD_LOGIC_VECTOR (15 downto 0);
+          PW : in STD_LOGIC_VECTOR (7 downto 0);
           PWM_OUT : out STD_LOGIC
           );
 end led_pwm;

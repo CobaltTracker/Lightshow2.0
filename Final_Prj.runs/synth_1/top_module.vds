@@ -2,8 +2,8 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Mon Nov 30 12:30:09 2015
-# Process ID: 10680
+# Start of session at: Mon Nov 30 12:32:08 2015
+# Process ID: 11212
 # Log file: C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.runs/synth_1/top_module.vds
 # Journal file: C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -13,7 +13,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 244.516 ; gain = 68.141
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 244.926 ; gain = 68.293
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top_module' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:31]
 	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
@@ -40,14 +40,477 @@ INFO: [Synth 8-256] done synthesizing module 'ADXL362Ctrl' (1#1) [C:/Users/Timot
 INFO: [Synth 8-3491] module 'led_pwm' declared at 'C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/led_pwm.vhd:7' bound to instance 'pwm' of component 'led_pwm' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:140]
 INFO: [Synth 8-638] synthesizing module 'led_pwm' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/led_pwm.vhd:14]
 INFO: [Synth 8-256] done synthesizing module 'led_pwm' (2#1) [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/led_pwm.vhd:14]
-ERROR: [Synth 8-549] port width mismatch for port 'PW': port width = 16, actual width = 8 [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:140]
-ERROR: [Synth 8-285] failed synthesizing module 'top_module' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:31]
+WARNING: [Synth 8-3848] Net led in module/entity top_module does not have driver. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:20]
+WARNING: [Synth 8-3848] Net aclInt1 in module/entity top_module does not have driver. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:26]
+WARNING: [Synth 8-3848] Net aclInt2 in module/entity top_module does not have driver. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'top_module' (3#1) [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:31]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[15]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[14]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[13]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[12]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[11]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[10]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[9]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[8]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[7]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[6]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[5]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[4]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[3]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[2]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[1]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[0]
+WARNING: [Synth 8-3331] design top_module has unconnected port aclInt1
+WARNING: [Synth 8-3331] design top_module has unconnected port aclInt2
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 279.680 ; gain = 103.305
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 280.152 ; gain = 103.520
 ---------------------------------------------------------------------------------
-RTL Elaboration failed
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 280.152 ; gain = 103.520
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:137]
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:138]
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:140]
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:141]
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:143]
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:144]
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:146]
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:147]
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:149]
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:150]
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:152]
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:153]
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:155]
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:156]
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:163]
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:164]
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:166]
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:167]
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:169]
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:170]
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:172]
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:173]
+WARNING: [Vivado 12-584] No ports matched 'an[4]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:175]
+WARNING: [Vivado 12-584] No ports matched 'an[4]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:176]
+WARNING: [Vivado 12-584] No ports matched 'an[5]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:178]
+WARNING: [Vivado 12-584] No ports matched 'an[5]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:179]
+WARNING: [Vivado 12-584] No ports matched 'an[6]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:181]
+WARNING: [Vivado 12-584] No ports matched 'an[6]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:182]
+WARNING: [Vivado 12-584] No ports matched 'an[7]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:184]
+WARNING: [Vivado 12-584] No ports matched 'an[7]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:185]
+WARNING: [Vivado 12-584] No ports matched 'btnC'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:194]
+WARNING: [Vivado 12-584] No ports matched 'btnC'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:195]
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:197]
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:198]
+WARNING: [Vivado 12-584] No ports matched 'JA[0]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:213]
+WARNING: [Vivado 12-584] No ports matched 'JA[0]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:214]
+WARNING: [Vivado 12-584] No ports matched 'JA[1]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:216]
+WARNING: [Vivado 12-584] No ports matched 'JA[1]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:217]
+WARNING: [Vivado 12-584] No ports matched 'JA[2]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:219]
+WARNING: [Vivado 12-584] No ports matched 'JA[2]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:220]
+Finished Parsing XDC File [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_module_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 591.660 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "StN_Spi_Trans" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Cnt_SS_Inactive_done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "Cnt_Num_Reads_Done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "Sample_Rate_Tick" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5544] ROM "Cmd_Reg_Addr_Done" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "StN_Spi_Trans" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Cnt_SS_Inactive_done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "Cnt_Num_Reads_Done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "Sample_Rate_Tick" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5544] ROM "Cmd_Reg_Addr_Done" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Cmd_Reg_Data[0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Cmd_Reg_Data[0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Cmd_Reg[1]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Cmd_Reg[2]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Cnt_Bytes_Sent" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "StN_Spi_SendRec" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "StN_Spi_SendRec" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "StN_Spi_SendRec" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "StN_Adxl_Ctrl" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "StN_Adxl_Ctrl" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "RESET_INT" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               20 Bit    Registers := 1     
+	               12 Bit    Registers := 5     
+	               10 Bit    Registers := 3     
+	                8 Bit    Registers := 12    
+	                7 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+	   9 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   5 Input     10 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      7 Bit        Muxes := 1     
+	   7 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   8 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top_module 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module ADXL362Ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               20 Bit    Registers := 1     
+	               12 Bit    Registers := 5     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 11    
+	                7 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+	   9 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   5 Input     10 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      7 Bit        Muxes := 1     
+	   7 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   8 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 1     
+Module led_pwm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'ADXL_Control/Cmd_Reg_Data_Addr_reg[1:0]' into 'ADXL_Control/Cmd_Reg_Data_Addr_reg[1:0]' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:451]
+INFO: [Synth 8-4471] merging register 'ADXL_Control/Cmd_Reg_Data_Addr_reg[1:0]' into 'ADXL_Control/Cmd_Reg_Data_Addr_reg[1:0]' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:451]
+INFO: [Synth 8-5544] ROM "ADXL_Control/Cnt_Num_Reads_Done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "ADXL_Control/Sample_Rate_Tick" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "ADXL_Control/Cnt_SS_Inactive_done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADXL_Control/StN_Spi_Trans" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RESET_INT" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design top_module has unconnected port led[15]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[14]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[13]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[12]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[11]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[10]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[9]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[8]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[7]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[6]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[5]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[4]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[3]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[2]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[1]
+WARNING: [Synth 8-3331] design top_module has unconnected port led[0]
+WARNING: [Synth 8-3331] design top_module has unconnected port aclInt1
+WARNING: [Synth 8-3331] design top_module has unconnected port aclInt2
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 591.660 ; gain = 415.027
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ADXL_Control/Cmd_Reg_reg[0][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ADXL_Control/Cmd_Reg_reg[1][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ADXL_Control/D_Send_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/StC_Spi_Trans_reg[9] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/StC_Spi_Trans_reg[8] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/StC_Spi_Trans_reg[7] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/StC_Spi_Trans_reg[3] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/StC_Spi_Trans_reg[0] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Data_Reg_reg[0][6] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Data_Reg_reg[0][5] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Data_Reg_reg[0][4] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Data_Reg_reg[0][3] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Data_Reg_reg[0][2] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Data_Reg_reg[0][1] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/StC_Adxl_Ctrl_reg[7] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Cmd_Reg_reg[0][5] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Cmd_Reg_reg[0][3] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Cmd_Reg_reg[0][0] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Cmd_Reg_reg[1][7] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Cmd_Reg_reg[2][7] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/D_Send_reg[7] ) is unused and will be removed from module top_module.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 591.660 ; gain = 415.027
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |SPI_If        |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |SPI_If_bbox |     1|
+|2     |BUFG        |     1|
+|3     |CARRY4      |     5|
+|4     |LUT1        |    21|
+|5     |LUT2        |    43|
+|6     |LUT3        |    15|
+|7     |LUT4        |    22|
+|8     |LUT5        |    38|
+|9     |LUT6        |    69|
+|10    |FDRE        |    97|
+|11    |FDSE        |     6|
+|12    |IBUF        |     2|
+|13    |OBUF        |     3|
+|14    |OBUFT       |    18|
++------+------------+------+
+
+Report Instance Areas: 
++------+---------------+------------+------+
+|      |Instance       |Module      |Cells |
++------+---------------+------------+------+
+|1     |top            |            |   352|
+|2     |  ADXL_Control |ADXL362Ctrl |   304|
++------+---------------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 591.660 ; gain = 415.027
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 36 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 591.660 ; gain = 88.168
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 591.660 ; gain = 415.027
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
 INFO: [Common 17-83] Releasing license: Synthesis
-13 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
-synth_design failed
-ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 30 12:30:15 2015...
+54 Infos, 114 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 591.660 ; gain = 401.086
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 591.660 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 30 12:32:43 2015...
