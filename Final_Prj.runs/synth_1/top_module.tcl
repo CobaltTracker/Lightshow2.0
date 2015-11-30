@@ -14,6 +14,7 @@ set_property parent.project_path C:/Users/Timothy/Documents/GitHub/Lightshow2.0/
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 read_vhdl -library xil_defaultlib {
+  C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/led_pwm.vhd
   C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd
   C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd
 }

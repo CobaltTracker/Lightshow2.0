@@ -137,7 +137,7 @@ ACCEL_X_OUT <= ACCEL_X (11 downto 4);
 ACCEL_Y_OUT <= ACCEL_Y (11 downto 4);
 
 --port map for pwm
-pwm : pwm_led
+pwm : led_pwm
 port map
     (CLK => clk,
      PW => ACCEL_Y_OUT,

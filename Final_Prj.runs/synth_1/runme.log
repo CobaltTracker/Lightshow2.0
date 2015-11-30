@@ -15,9 +15,8 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 244.801 ; gain = 68.398
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 244.516 ; gain = 68.141
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-1090] 'pwm_led' is not compiled in library work [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:140]
 INFO: [Synth 8-638] synthesizing module 'top_module' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:31]
 	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
 	Parameter SCLK_FREQUENCY_HZ bound to: 1000000 - type: integer 
@@ -40,14 +39,17 @@ INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "USER" *) [C:/Users/Ti
 	Parameter SCLK_FREQUENCY_HZ bound to: 1000000 - type: integer 
 INFO: [Synth 8-637] synthesizing blackbox instance 'SPI_Interface' of component 'SPI_If' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:373]
 INFO: [Synth 8-256] done synthesizing module 'ADXL362Ctrl' (1#1) [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:117]
-ERROR: [Synth 8-493] no such design unit 'pwm_led' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:140]
+INFO: [Synth 8-3491] module 'led_pwm' declared at 'C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/led_pwm.vhd:7' bound to instance 'pwm' of component 'led_pwm' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'led_pwm' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/led_pwm.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'led_pwm' (2#1) [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/led_pwm.vhd:14]
+ERROR: [Synth 8-549] port width mismatch for port 'PW': port width = 16, actual width = 8 [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:140]
 ERROR: [Synth 8-285] failed synthesizing module 'top_module' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:31]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 279.094 ; gain = 102.691
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 279.680 ; gain = 103.305
 ---------------------------------------------------------------------------------
 RTL Elaboration failed
 INFO: [Common 17-83] Releasing license: Synthesis
-10 Infos, 1 Warnings, 0 Critical Warnings and 3 Errors encountered.
+13 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
 synth_design failed
 ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 30 12:25:26 2015...
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 30 12:30:15 2015...
