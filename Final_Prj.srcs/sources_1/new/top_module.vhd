@@ -89,7 +89,7 @@ signal RESET : std_logic := '0';
 begin
 
 -- Create the self-blocking reset counter
-COUNT_RESET: process(mclk, cnt_acc_reset, RESET)
+COUNT_RESET: process(clk, cnt_acc_reset, RESET)
 begin
    if clk'EVENT and clk = '1' then
       if (RESET = '1') then
