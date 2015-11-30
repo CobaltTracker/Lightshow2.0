@@ -84,6 +84,7 @@ signal Data_Ready : STD_LOGIC;
 -- Self-blocking reset counter
 signal cnt_acc_reset : integer range 0 to (ACC_RESET_IDLE_CLOCKS - 1):= 0;
 signal RESET_INT: std_logic;
+signal RESET : std_logic := '0';
 
 begin
 
