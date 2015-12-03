@@ -1,9 +1,10 @@
+INFO: [Common 17-701] A license check has taken more than 10 seconds to complete. This may indicate that there is a performance issue with one or more license servers listed in XILINXD_LICENSE_FILE or LM_LICENSE_FILE, or that the license servers are just not responding at all. Try setting the FLEXLM_DIAGNOSTICS environment variable to 3 and running Vivado again to get more information.
 #-----------------------------------------------------------
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Mon Nov 30 12:32:08 2015
-# Process ID: 11212
+# Start of session at: Thu Dec 03 10:20:16 2015
+# Process ID: 18508
 # Log file: C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.runs/synth_1/top_module.vds
 # Journal file: C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -13,7 +14,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 244.926 ; gain = 68.293
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 244.977 ; gain = 68.598
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top_module' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:31]
 	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
@@ -24,7 +25,7 @@ INFO: [Synth 8-638] synthesizing module 'top_module' [C:/Users/Timothy/Documents
 	Parameter SCLK_FREQUENCY_HZ bound to: 1000000 - type: integer 
 	Parameter NUM_READS_AVG bound to: 16 - type: integer 
 	Parameter UPDATE_FREQUENCY_HZ bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'ADXL362Ctrl' declared at 'C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:89' bound to instance 'ADXL_Control' of component 'ADXL362Ctrl' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:109]
+INFO: [Synth 8-3491] module 'ADXL362Ctrl' declared at 'C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:89' bound to instance 'ADXL_Control' of component 'ADXL362Ctrl' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:107]
 INFO: [Synth 8-638] synthesizing module 'ADXL362Ctrl' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:117]
 	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
 	Parameter SCLK_FREQUENCY_HZ bound to: 1000000 - type: integer 
@@ -37,12 +38,13 @@ INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "USER" *) [C:/Users/Ti
 	Parameter SCLK_FREQUENCY_HZ bound to: 1000000 - type: integer 
 INFO: [Synth 8-637] synthesizing blackbox instance 'SPI_Interface' of component 'SPI_If' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:373]
 INFO: [Synth 8-256] done synthesizing module 'ADXL362Ctrl' (1#1) [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:117]
-INFO: [Synth 8-3491] module 'led_pwm' declared at 'C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/led_pwm.vhd:7' bound to instance 'pwm' of component 'led_pwm' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:140]
+INFO: [Synth 8-3491] module 'led_pwm' declared at 'C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/led_pwm.vhd:7' bound to instance 'pwm' of component 'led_pwm' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:138]
 INFO: [Synth 8-638] synthesizing module 'led_pwm' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/led_pwm.vhd:14]
 INFO: [Synth 8-256] done synthesizing module 'led_pwm' (2#1) [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/led_pwm.vhd:14]
 WARNING: [Synth 8-3848] Net led in module/entity top_module does not have driver. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:20]
 WARNING: [Synth 8-3848] Net aclInt1 in module/entity top_module does not have driver. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:26]
 WARNING: [Synth 8-3848] Net aclInt2 in module/entity top_module does not have driver. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:27]
+WARNING: [Synth 8-3848] Net RESET_INT in module/entity top_module does not have driver. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:84]
 INFO: [Synth 8-256] done synthesizing module 'top_module' (3#1) [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:31]
 WARNING: [Synth 8-3331] design top_module has unconnected port led[15]
 WARNING: [Synth 8-3331] design top_module has unconnected port led[14]
@@ -63,7 +65,7 @@ WARNING: [Synth 8-3331] design top_module has unconnected port led[0]
 WARNING: [Synth 8-3331] design top_module has unconnected port aclInt1
 WARNING: [Synth 8-3331] design top_module has unconnected port aclInt2
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 280.152 ; gain = 103.520
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 279.262 ; gain = 102.883
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -72,8 +74,9 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin ADXL_Control:RESET to constant 0 [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:107]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 280.152 ; gain = 103.520
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 279.262 ; gain = 102.883
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -144,22 +147,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 591.660 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 591.602 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "StN_Spi_Trans" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Cnt_SS_Inactive_done" won't be mapped to RAM because it is too sparse
@@ -181,9 +184,8 @@ INFO: [Synth 8-5544] ROM "StN_Spi_SendRec" won't be mapped to Block RAM because 
 INFO: [Synth 8-5544] ROM "StN_Spi_SendRec" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "StN_Adxl_Ctrl" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "StN_Adxl_Ctrl" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "RESET_INT" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -197,7 +199,7 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     20 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
@@ -205,13 +207,13 @@ Detailed RTL Component Info :
 +---Registers : 
 	               20 Bit    Registers := 1     
 	               12 Bit    Registers := 5     
-	               10 Bit    Registers := 3     
+	               10 Bit    Registers := 2     
 	                8 Bit    Registers := 12    
 	                7 Bit    Registers := 2     
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 1     
 	   9 Input     12 Bit        Muxes := 1     
@@ -242,13 +244,6 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module top_module 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 1     
-+---Registers : 
-	               10 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
 Module ADXL362Ctrl 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -309,7 +304,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 591.660 ; gain = 415.027
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -319,7 +314,6 @@ INFO: [Synth 8-5544] ROM "ADXL_Control/Cnt_Num_Reads_Done" won't be mapped to Bl
 INFO: [Synth 8-5545] ROM "ADXL_Control/Sample_Rate_Tick" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5546] ROM "ADXL_Control/Cnt_SS_Inactive_done" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ADXL_Control/StN_Spi_Trans" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "RESET_INT" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3331] design top_module has unconnected port led[15]
 WARNING: [Synth 8-3331] design top_module has unconnected port led[14]
 WARNING: [Synth 8-3331] design top_module has unconnected port led[13]
@@ -339,9 +333,9 @@ WARNING: [Synth 8-3331] design top_module has unconnected port led[0]
 WARNING: [Synth 8-3331] design top_module has unconnected port aclInt1
 WARNING: [Synth 8-3331] design top_module has unconnected port aclInt2
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished Parallel Reinference  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 591.602 ; gain = 415.223
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -373,16 +367,16 @@ WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/D_Send_reg[7] ) is unu
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 591.602 ; gain = 415.223
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -390,10 +384,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -405,7 +399,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -423,7 +417,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -436,7 +430,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -448,13 +442,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 591.660 ; gain = 415.027
+Start Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -475,13 +469,13 @@ Report Cell Usage:
 |2     |BUFG        |     1|
 |3     |CARRY4      |     5|
 |4     |LUT1        |    21|
-|5     |LUT2        |    43|
-|6     |LUT3        |    15|
-|7     |LUT4        |    22|
-|8     |LUT5        |    38|
-|9     |LUT6        |    69|
-|10    |FDRE        |    97|
-|11    |FDSE        |     6|
+|5     |LUT2        |    44|
+|6     |LUT3        |    14|
+|7     |LUT4        |    24|
+|8     |LUT5        |    27|
+|9     |LUT6        |    65|
+|10    |FDRE        |    88|
+|11    |FDSE        |     4|
 |12    |IBUF        |     2|
 |13    |OBUF        |     3|
 |14    |OBUFT       |    18|
@@ -491,15 +485,15 @@ Report Instance Areas:
 +------+---------------+------------+------+
 |      |Instance       |Module      |Cells |
 +------+---------------+------------+------+
-|1     |top            |            |   352|
+|1     |top            |            |   328|
 |2     |  ADXL_Control |ADXL362Ctrl |   304|
 +------+---------------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 591.660 ; gain = 415.027
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 591.602 ; gain = 415.223
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 36 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 591.660 ; gain = 88.168
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 591.660 ; gain = 415.027
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 591.602 ; gain = 87.211
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 591.602 ; gain = 415.223
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -509,8 +503,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-54 Infos, 114 Warnings, 0 Critical Warnings and 0 Errors encountered.
+52 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 591.660 ; gain = 401.086
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 591.660 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 30 12:32:43 2015...
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 591.602 ; gain = 400.871
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 591.602 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 03 10:20:50 2015...

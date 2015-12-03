@@ -76,8 +76,6 @@ signal  ACCEL_X    : STD_LOGIC_VECTOR (11 downto 0);
 signal  ACCEL_Y    : STD_LOGIC_VECTOR (11 downto 0);
 signal  ACCEL_Z    : STD_LOGIC_VECTOR (11 downto 0);
 signal  ACCEL_TMP_OUT    : STD_LOGIC_VECTOR (11 downto 0);
-signal  ACCEL_X_OUT    : STD_LOGIC_VECTOR (7 downto 0);
-signal  ACCEL_Y_OUT    : STD_LOGIC_VECTOR (7 downto 0);
 
 signal Data_Ready : STD_LOGIC;
 
@@ -133,16 +131,54 @@ port map
  SS         => aclSS
 );
 
-ACCEL_X_OUT <= ACCEL_X (11 downto 4);
-ACCEL_Y_OUT <= ACCEL_Y (11 downto 4);
+--ACCEL_X_OUT <= ACCEL_X (11 downto 4);
+--ACCEL_Y_OUT <= ACCEL_Y (11 downto 4);
 
 --port map for pwm
 pwm : led_pwm
 port map
     (CLK => clk,
-     PW => ACCEL_Y_OUT,
+     PW => ACCEL_Y(10 downto 3),
      PWM_OUT => pwm_out
      );
 --todo - set up logic for leds based on ACCEL_X_OUTPUT
+LEDS: process (ACCEL_X)
+begin
+if ((ACCEL_X (10 downto 3) < x"F") AND (ACCEL_X(11) = '0')) then
+    led <= "0000000010000000";
+elsif ((ACCEL_X (10 downto 3) < x"FF") AND (ACCEL_X(11) = '0')) then
+    led <= "0000000011000000";
+elsif ((ACCEL_X (10 downto 3) < x"FFF") AND (ACCEL_X(11) = '0')) then
+    led <= "0000000011100000";
+elsif ((ACCEL_X (10 downto 3) < x"FFFF") AND (ACCEL_X(11) = '0')) then
+    led <= "0000000011110000";
+elsif ((ACCEL_X (10 downto 3) < x"FFFFF") AND (ACCEL_X(11) = '0')) then
+    led <= "0000000011111000";
+elsif ((ACCEL_X (10 downto 3) < x"FFFFFF") AND (ACCEL_X(11) = '0')) then
+    led <= "0000000011111100";
+elsif ((ACCEL_X (10 downto 3) < x"FFFFFFF") AND (ACCEL_X(11) = '0')) then
+    led <= "0000000011111110";
+elsif ((ACCEL_X (10 downto 3) < x"FFFFFFFF") AND (ACCEL_X(11) = '0')) then
+    led <= "0000000011111111";
+elsif ((ACCEL_X (10 downto 3) < x"F") AND (ACCEL_X(11) = '1')) then
+    led <= "0000000100000000";
+elsif ((ACCEL_X (10 downto 3) < x"FF") AND (ACCEL_X(11) = '1')) then
+    led <= "0000001100000000";
+elsif ((ACCEL_X (10 downto 3) < x"FFF") AND (ACCEL_X(11) = '1')) then
+    led <= "0000011100000000";
+elsif ((ACCEL_X (10 downto 3) < x"FFFF") AND (ACCEL_X(11) = '1')) then
+    led <= "0000111100000000";
+elsif ((ACCEL_X (10 downto 3) < x"FFFFF") AND (ACCEL_X(11) = '1')) then
+    led <= "0001111100000000";
+elsif ((ACCEL_X (10 downto 3) < x"FFFFFF") AND (ACCEL_X(11) = '1')) then
+    led <= "0011111100000000";
+elsif ((ACCEL_X (10 downto 3) < x"FFFFFFF") AND (ACCEL_X(11) = '1')) then
+    led <= "0111111100000000";
+elsif ((ACCEL_X (10 downto 3) < x"FFFFFFFF") AND (ACCEL_X(11) = '1')) then
+    led <= "1111111100000000";
+end if;
+end process;
+
+
 
 end Behavioral;
