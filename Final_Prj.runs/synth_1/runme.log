@@ -3,7 +3,6 @@
     with args -log top_module.vds -m64 -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
 
 WARNING: Default location for XILINX_VIVADO_HLS not found: 
-INFO: [Common 17-701] A license check has taken more than 10 seconds to complete. This may indicate that there is a performance issue with one or more license servers listed in XILINXD_LICENSE_FILE or LM_LICENSE_FILE, or that the license servers are just not responding at all. Try setting the FLEXLM_DIAGNOSTICS environment variable to 3 and running Vivado again to get more information.
 
 ****** Vivado v2015.2 (64-bit)
   **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
@@ -16,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 244.977 ; gain = 68.598
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 244.043 ; gain = 67.926
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top_module' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:31]
+INFO: [Synth 8-638] synthesizing module 'top_module' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:29]
 	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
 	Parameter SCLK_FREQUENCY_HZ bound to: 1000000 - type: integer 
 	Parameter NUM_READS_AVG bound to: 16 - type: integer 
@@ -27,7 +26,7 @@ INFO: [Synth 8-638] synthesizing module 'top_module' [C:/Users/Timothy/Documents
 	Parameter SCLK_FREQUENCY_HZ bound to: 1000000 - type: integer 
 	Parameter NUM_READS_AVG bound to: 16 - type: integer 
 	Parameter UPDATE_FREQUENCY_HZ bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'ADXL362Ctrl' declared at 'C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:89' bound to instance 'ADXL_Control' of component 'ADXL362Ctrl' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:107]
+INFO: [Synth 8-3491] module 'ADXL362Ctrl' declared at 'C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:89' bound to instance 'ADXL_Control' of component 'ADXL362Ctrl' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:99]
 INFO: [Synth 8-638] synthesizing module 'ADXL362Ctrl' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:117]
 	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
 	Parameter SCLK_FREQUENCY_HZ bound to: 1000000 - type: integer 
@@ -38,36 +37,21 @@ INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "USER" *) [C:/Users/Ti
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "USER" *) [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:365]
 	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
 	Parameter SCLK_FREQUENCY_HZ bound to: 1000000 - type: integer 
-INFO: [Synth 8-637] synthesizing blackbox instance 'SPI_Interface' of component 'SPI_If' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:373]
-INFO: [Synth 8-256] done synthesizing module 'ADXL362Ctrl' (1#1) [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:117]
-INFO: [Synth 8-3491] module 'led_pwm' declared at 'C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/led_pwm.vhd:7' bound to instance 'pwm' of component 'led_pwm' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:138]
-INFO: [Synth 8-638] synthesizing module 'led_pwm' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/led_pwm.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'led_pwm' (2#1) [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/led_pwm.vhd:14]
-WARNING: [Synth 8-3848] Net led in module/entity top_module does not have driver. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:20]
-WARNING: [Synth 8-3848] Net aclInt1 in module/entity top_module does not have driver. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:26]
-WARNING: [Synth 8-3848] Net aclInt2 in module/entity top_module does not have driver. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:27]
-WARNING: [Synth 8-3848] Net RESET_INT in module/entity top_module does not have driver. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:84]
-INFO: [Synth 8-256] done synthesizing module 'top_module' (3#1) [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:31]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[15]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[14]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[13]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[12]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[11]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[10]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[9]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[8]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[7]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[6]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[5]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[4]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[3]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[2]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[1]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[0]
+INFO: [Synth 8-3491] module 'SPI_If' declared at 'C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/SPI_If.vhd:42' bound to instance 'SPI_Interface' of component 'SPI_If' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:373]
+INFO: [Synth 8-638] synthesizing module 'SPI_If' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/SPI_If.vhd:66]
+	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
+	Parameter SCLK_FREQUENCY_HZ bound to: 1000000 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "USER" *) [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/SPI_If.vhd:113]
+INFO: [Synth 8-256] done synthesizing module 'SPI_If' (1#1) [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/SPI_If.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'ADXL362Ctrl' (2#1) [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:117]
+WARNING: [Synth 8-614] signal 'led_array' is read in the process but is not in the sensitivity list [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:127]
+WARNING: [Synth 8-3848] Net aclInt1 in module/entity top_module does not have driver. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:24]
+WARNING: [Synth 8-3848] Net aclInt2 in module/entity top_module does not have driver. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'top_module' (3#1) [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:29]
 WARNING: [Synth 8-3331] design top_module has unconnected port aclInt1
 WARNING: [Synth 8-3331] design top_module has unconnected port aclInt2
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 279.262 ; gain = 102.883
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 279.230 ; gain = 103.113
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -76,9 +60,8 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin ADXL_Control:RESET to constant 0 [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:107]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 279.262 ; gain = 102.883
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 279.230 ; gain = 103.113
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -87,85 +70,198 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc]
 WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:140]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:140]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:141]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:143]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:143]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:150]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:150]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:155]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:155]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:156]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:156]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:163]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:163]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:164]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:164]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:166]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:166]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:167]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:167]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:169]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:169]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:170]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:170]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:172]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:172]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:173]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:173]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[4]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:175]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:175]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[4]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:176]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:176]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[5]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:178]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:178]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[5]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:179]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:179]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[6]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:181]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:181]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[6]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:182]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:182]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[7]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:184]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:184]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[7]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:185]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:185]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'btnC'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:194]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:194]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'btnC'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:195]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:195]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:197]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:197]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:198]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:198]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'JA[0]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:213]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:213]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'JA[0]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:214]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:214]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'JA[1]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:216]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:216]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'JA[1]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:217]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:217]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'JA[2]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:219]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:219]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'JA[2]'. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:220]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc:220]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_module_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 591.602 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 592.664 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 592.664 ; gain = 416.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 592.664 ; gain = 416.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 592.664 ; gain = 416.547
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "SCLK_2X_TICK" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "StN" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "StN_Spi_Trans" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Cnt_SS_Inactive_done" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "Cnt_Num_Reads_Done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -186,8 +282,12 @@ INFO: [Synth 8-5544] ROM "StN_Spi_SendRec" won't be mapped to Block RAM because 
 INFO: [Synth 8-5544] ROM "StN_Spi_SendRec" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "StN_Adxl_Ctrl" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "StN_Adxl_Ctrl" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "RESET_INT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RESET_INT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "led_array" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'led_array_reg' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/top_module.vhd:131]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 592.664 ; gain = 416.547
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -201,44 +301,52 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     20 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
 	   2 Input      2 Bit       Adders := 2     
 +---Registers : 
 	               20 Bit    Registers := 1     
 	               12 Bit    Registers := 5     
-	               10 Bit    Registers := 2     
-	                8 Bit    Registers := 12    
+	               10 Bit    Registers := 3     
+	                8 Bit    Registers := 15    
 	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
 +---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   9 Input     16 Bit        Muxes := 1     
+	   8 Input     15 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 1     
 	   9 Input     12 Bit        Muxes := 1     
 	   2 Input     11 Bit        Muxes := 1     
 	   5 Input     10 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
 	   5 Input      8 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
 	   4 Input      7 Bit        Muxes := 1     
 	   7 Input      7 Bit        Muxes := 1     
 	   8 Input      7 Bit        Muxes := 2     
 	   2 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
 	  10 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 4     
 	   8 Input      3 Bit        Muxes := 1     
 	   6 Input      3 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 3     
 	   4 Input      2 Bit        Muxes := 1     
 	   6 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 15    
-	   4 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 22    
 	  10 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -246,6 +354,36 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module top_module 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   9 Input     16 Bit        Muxes := 1     
+	   8 Input     15 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module SPI_If 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 4     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
 Module ADXL362Ctrl 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -287,13 +425,6 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 1     
 	  10 Input      1 Bit        Muxes := 1     
-Module led_pwm 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -306,38 +437,25 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 591.602 ; gain = 415.223
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 592.664 ; gain = 416.547
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'ADXL_Control/Cmd_Reg_Data_Addr_reg[1:0]' into 'ADXL_Control/Cmd_Reg_Data_Addr_reg[1:0]' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:451]
 INFO: [Synth 8-4471] merging register 'ADXL_Control/Cmd_Reg_Data_Addr_reg[1:0]' into 'ADXL_Control/Cmd_Reg_Data_Addr_reg[1:0]' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:451]
 INFO: [Synth 8-5544] ROM "ADXL_Control/Cnt_Num_Reads_Done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "ADXL_Control/SPI_Interface/SCLK_2X_TICK" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADXL_Control/SPI_Interface/StN" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "ADXL_Control/Sample_Rate_Tick" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
 INFO: [Synth 8-5546] ROM "ADXL_Control/Cnt_SS_Inactive_done" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ADXL_Control/StN_Spi_Trans" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-3331] design top_module has unconnected port led[15]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[14]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[13]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[12]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[11]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[10]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[9]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[8]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[7]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[6]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[5]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[4]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[3]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[2]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[1]
-WARNING: [Synth 8-3331] design top_module has unconnected port led[0]
+INFO: [Synth 8-5546] ROM "RESET_INT" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3331] design top_module has unconnected port aclInt1
 WARNING: [Synth 8-3331] design top_module has unconnected port aclInt2
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 592.664 ; gain = 416.547
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished Parallel Reinference  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 592.664 ; gain = 416.547
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -346,39 +464,37 @@ Report RTL Partitions:
 +-+--------------+------------+----------+
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ADXL_Control/Cmd_Reg_reg[0][5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ADXL_Control/Cmd_Reg_reg[1][7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ADXL_Control/D_Send_reg[7] )
-WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/StC_Spi_Trans_reg[9] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/StC_Adxl_Ctrl_reg[5] ) is unused and will be removed from module top_module.
 WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/StC_Spi_Trans_reg[8] ) is unused and will be removed from module top_module.
 WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/StC_Spi_Trans_reg[7] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/StC_Spi_Trans_reg[6] ) is unused and will be removed from module top_module.
 WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/StC_Spi_Trans_reg[3] ) is unused and will be removed from module top_module.
 WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/StC_Spi_Trans_reg[0] ) is unused and will be removed from module top_module.
-WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Data_Reg_reg[0][6] ) is unused and will be removed from module top_module.
-WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Data_Reg_reg[0][5] ) is unused and will be removed from module top_module.
-WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Data_Reg_reg[0][4] ) is unused and will be removed from module top_module.
-WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Data_Reg_reg[0][3] ) is unused and will be removed from module top_module.
-WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Data_Reg_reg[0][2] ) is unused and will be removed from module top_module.
-WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Data_Reg_reg[0][1] ) is unused and will be removed from module top_module.
-WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/StC_Adxl_Ctrl_reg[7] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/SPI_Interface/StC_reg[6] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/SPI_Interface/StC_reg[5] ) is unused and will be removed from module top_module.
 WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Cmd_Reg_reg[0][5] ) is unused and will be removed from module top_module.
 WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Cmd_Reg_reg[0][3] ) is unused and will be removed from module top_module.
 WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Cmd_Reg_reg[0][0] ) is unused and will be removed from module top_module.
 WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Cmd_Reg_reg[1][7] ) is unused and will be removed from module top_module.
 WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/Cmd_Reg_reg[2][7] ) is unused and will be removed from module top_module.
 WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/D_Send_reg[7] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/ACCEL_Y_reg[2] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/ACCEL_Y_reg[1] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\ADXL_Control/ACCEL_Y_reg[0] ) is unused and will be removed from module top_module.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 592.664 ; gain = 416.547
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 592.664 ; gain = 416.547
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 592.664 ; gain = 416.547
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -386,10 +502,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 592.664 ; gain = 416.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 592.664 ; gain = 416.547
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -401,7 +517,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 592.664 ; gain = 416.547
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -419,7 +535,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 592.664 ; gain = 416.547
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -432,7 +548,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 592.664 ; gain = 416.547
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -444,69 +560,90 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 592.664 ; gain = 416.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 591.602 ; gain = 415.223
+Start Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 592.664 ; gain = 416.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 592.664 ; gain = 416.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register:
++------------+---------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                        | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+---------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top_module  | ADXL_Control/Data_Reg_reg[4][7] | 4      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|top_module  | ADXL_Control/Data_Reg_reg[4][6] | 5      | 6     | NO           | NO                 | YES               | 6      | 0       | 
++------------+---------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+--------------+----------+
-|      |BlackBox name |Instances |
-+------+--------------+----------+
-|1     |SPI_If        |         1|
-+------+--------------+----------+
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
 
 Report Cell Usage: 
-+------+------------+------+
-|      |Cell        |Count |
-+------+------------+------+
-|1     |SPI_If_bbox |     1|
-|2     |BUFG        |     1|
-|3     |CARRY4      |     5|
-|4     |LUT1        |    21|
-|5     |LUT2        |    44|
-|6     |LUT3        |    14|
-|7     |LUT4        |    24|
-|8     |LUT5        |    27|
-|9     |LUT6        |    65|
-|10    |FDRE        |    88|
-|11    |FDSE        |     4|
-|12    |IBUF        |     2|
-|13    |OBUF        |     3|
-|14    |OBUFT       |    18|
-+------+------------+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     9|
+|3     |LUT1   |    23|
+|4     |LUT2   |    65|
+|5     |LUT3   |    26|
+|6     |LUT4   |    30|
+|7     |LUT5   |    54|
+|8     |LUT6   |    85|
+|9     |SRL16E |     8|
+|10    |FDRE   |   179|
+|11    |FDSE   |     7|
+|12    |LDC    |     9|
+|13    |LDCP   |     6|
+|14    |LDP    |     1|
+|15    |IBUF   |     2|
+|16    |OBUF   |    19|
+|17    |OBUFT  |     2|
++------+-------+------+
 
 Report Instance Areas: 
-+------+---------------+------------+------+
-|      |Instance       |Module      |Cells |
-+------+---------------+------------+------+
-|1     |top            |            |   328|
-|2     |  ADXL_Control |ADXL362Ctrl |   304|
-+------+---------------+------------+------+
++------+------------------+------------+------+
+|      |Instance          |Module      |Cells |
++------+------------------+------------+------+
+|1     |top               |            |   526|
+|2     |  ADXL_Control    |ADXL362Ctrl |   462|
+|3     |    SPI_Interface |SPI_If      |    89|
++------+------------------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 591.602 ; gain = 415.223
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 592.664 ; gain = 416.547
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 36 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 591.602 ; gain = 87.211
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 591.602 ; gain = 415.223
+Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 592.664 ; gain = 88.289
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 592.664 ; gain = 416.547
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 16 instances were transformed.
+  LDC => LDCE: 9 instances
+  LDCP => LDCP (GND, LUT3, LUT3, LDCE, VCC): 6 instances
+  LDP => LDPE: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-52 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
+59 Infos, 81 Warnings, 56 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 591.602 ; gain = 400.871
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 591.602 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 03 10:20:50 2015...
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 592.664 ; gain = 401.984
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 592.664 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 05 22:25:31 2015...

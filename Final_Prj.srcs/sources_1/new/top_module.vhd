@@ -1,14 +1,12 @@
+--Timothy Bernier and Jean Marrero
+--CEC330L Final Project (Lightshow 2.0)
+--This program will create a shifting LED array based on the Y rotation of the board
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity top_module is
 generic (
@@ -58,15 +56,6 @@ port
 
 );
 end component;
-component led_pwm
-Port (CLK : in STD_LOGIC;
-      PW : in STD_LOGIC_VECTOR (7 downto 0);
-      PWM_OUT : out STD_LOGIC
-      );
-end component;
-
---signals for pwm
-signal pwm_out : std_logic;
 
 -- Self-blocking reset counter constants
 constant ACC_RESET_PERIOD_US : integer := 10;
@@ -83,6 +72,9 @@ signal Data_Ready : STD_LOGIC;
 signal cnt_acc_reset : integer range 0 to (ACC_RESET_IDLE_CLOCKS - 1):= 0;
 signal RESET_INT: std_logic;
 signal RESET : std_logic := '0';
+signal clk_slow : std_logic;
+signal register_counter : std_logic_vector (26 downto 0);
+signal led_array : std_logic_vector (15 downto 0);
 
 begin
 
@@ -131,54 +123,52 @@ port map
  SS         => aclSS
 );
 
---ACCEL_X_OUT <= ACCEL_X (11 downto 4);
---ACCEL_Y_OUT <= ACCEL_Y (11 downto 4);
-
---port map for pwm
-pwm : led_pwm
-port map
-    (CLK => clk,
-     PW => ACCEL_Y(10 downto 3),
-     PWM_OUT => pwm_out
-     );
---todo - set up logic for leds based on ACCEL_X_OUTPUT
-LEDS: process (ACCEL_X)
+--Create logic based on Y-axis
+LEDS: process (ACCEL_Y)
 begin
-if ((ACCEL_X (10 downto 3) < x"F") AND (ACCEL_X(11) = '0')) then
-    led <= "0000000010000000";
-elsif ((ACCEL_X (10 downto 3) < x"FF") AND (ACCEL_X(11) = '0')) then
-    led <= "0000000011000000";
-elsif ((ACCEL_X (10 downto 3) < x"FFF") AND (ACCEL_X(11) = '0')) then
-    led <= "0000000011100000";
-elsif ((ACCEL_X (10 downto 3) < x"FFFF") AND (ACCEL_X(11) = '0')) then
-    led <= "0000000011110000";
-elsif ((ACCEL_X (10 downto 3) < x"FFFFF") AND (ACCEL_X(11) = '0')) then
-    led <= "0000000011111000";
-elsif ((ACCEL_X (10 downto 3) < x"FFFFFF") AND (ACCEL_X(11) = '0')) then
-    led <= "0000000011111100";
-elsif ((ACCEL_X (10 downto 3) < x"FFFFFFF") AND (ACCEL_X(11) = '0')) then
-    led <= "0000000011111110";
-elsif ((ACCEL_X (10 downto 3) < x"FFFFFFFF") AND (ACCEL_X(11) = '0')) then
-    led <= "0000000011111111";
-elsif ((ACCEL_X (10 downto 3) < x"F") AND (ACCEL_X(11) = '1')) then
-    led <= "0000000100000000";
-elsif ((ACCEL_X (10 downto 3) < x"FF") AND (ACCEL_X(11) = '1')) then
-    led <= "0000001100000000";
-elsif ((ACCEL_X (10 downto 3) < x"FFF") AND (ACCEL_X(11) = '1')) then
-    led <= "0000011100000000";
-elsif ((ACCEL_X (10 downto 3) < x"FFFF") AND (ACCEL_X(11) = '1')) then
-    led <= "0000111100000000";
-elsif ((ACCEL_X (10 downto 3) < x"FFFFF") AND (ACCEL_X(11) = '1')) then
-    led <= "0001111100000000";
-elsif ((ACCEL_X (10 downto 3) < x"FFFFFF") AND (ACCEL_X(11) = '1')) then
-    led <= "0011111100000000";
-elsif ((ACCEL_X (10 downto 3) < x"FFFFFFF") AND (ACCEL_X(11) = '1')) then
-    led <= "0111111100000000";
-elsif ((ACCEL_X (10 downto 3) < x"FFFFFFFF") AND (ACCEL_X(11) = '1')) then
-    led <= "1111111100000000";
-end if;
+if (ACCEL_Y(11) = '0') then    
+    if (ACCEL_Y (10 downto 3) < 16) then
+        led_array <= "0000000100000000";
+    elsif (ACCEL_Y (10 downto 3) < 32) then
+        led_array <= "0000001100000000";
+    elsif (ACCEL_Y(10 downto 3) < 48) then
+        led_array <= "0000011100000000";
+    elsif (ACCEL_Y(10 downto 3) < 64) then
+        led_array <= "0000111100000000";
+    elsif (ACCEL_Y(10 downto 3) < 80) then
+        led_array <= "0001111100000000";
+    elsif (ACCEL_Y(10 downto 3) < 96) then
+        led_array <= "0011111100000000";
+    elsif (ACCEL_Y(10 downto 3) < 112) then
+        led_array <= "0111111100000000";
+    elsif (ACCEL_Y(10 downto 3) < 128) then
+        led_array <= "1111111100000000";
+    else
+        null;
+    end if;  -- end ACCEL_Y
+--w/ ACCEL_Y(11) active high the signal starts full '1'    
+elsif (ACCEL_Y(11) = '1') then
+    if ((ACCEL_Y (10 downto 3) < 240) AND (ACCEL_Y(10 downto 3) > 224)) then
+        led_array <= "0000000010000000";
+    elsif ((ACCEL_Y (10 downto 3) < 224) AND (ACCEL_Y(10 downto 3) > 208)) then
+        led_array <= "0000000011000000";
+    elsif ((ACCEL_Y (10 downto 3) < 208) AND (ACCEL_Y(10 downto 3) > 192)) then
+        led_array <= "0000000011100000";
+    elsif ((ACCEL_Y (10 downto 3) < 192) AND (ACCEL_Y(10 downto 3) > 176)) then
+        led_array <= "0000000011110000";
+    elsif ((ACCEL_Y (10 downto 3) < 176) AND (ACCEL_Y(10 downto 3) > 160)) then
+        led_array <= "0000000011111000";
+    elsif ((ACCEL_Y (10 downto 3) < 160) AND (ACCEL_Y(10 downto 3) > 144)) then
+        led_array <= "0000000011111100";
+    elsif ((ACCEL_Y (10 downto 3) < 144) AND (ACCEL_Y(10 downto 3) > 128)) then
+        led_array <= "0000000011111110";
+    elsif (ACCEL_Y (10 downto 3) < 128) then
+        led_array <= "0000000011111111";
+    else 
+        null;
+    end if; -- end ACCEL_Y
+end if;-- end 11 bit
+led <= led_array;
 end process;
-
-
 
 end Behavioral;

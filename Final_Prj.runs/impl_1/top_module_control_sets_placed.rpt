@@ -1,0 +1,79 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Sat Dec 05 22:26:01 2015
+| Host         : Timothy-Y40 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_module_control_sets_placed.rpt
+| Design       : top_module
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    26 |
+| Minimum Number of register sites lost to control set restrictions |   102 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              36 |           17 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              46 |           14 |
+| Yes          | No                    | No                     |              40 |           11 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              80 |           31 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+------------------------------------------------+-----------------------------------------+------------------+----------------+
+|      Clock Signal     |                  Enable Signal                 |             Set/Reset Signal            | Slice Load Count | Bel Load Count |
++-----------------------+------------------------------------------------+-----------------------------------------+------------------+----------------+
+|  led_array_reg[9]/G0  |                                                |                                         |                1 |              1 |
+|  led_array_reg[14]/G0 |                                                |                                         |                1 |              1 |
+|  led_array_reg[13]/G0 |                                                |                                         |                1 |              1 |
+|  led_array_reg[12]/G0 |                                                |                                         |                1 |              1 |
+|  led_array_reg[11]/G0 |                                                |                                         |                1 |              1 |
+|  led_array_reg[10]/G0 |                                                |                                         |                1 |              1 |
+|  clk_IBUF_BUFG        | ADXL_Control/Cmd_Reg[0][6]_i_2_n_0             | ADXL_Control/Cmd_Reg[0][6]_i_1_n_0      |                1 |              4 |
+|  clk_IBUF_BUFG        | ADXL_Control/CE_Cnt_Num_Reads                  | ADXL_Control/Reset_Cnt_Num_Reads        |                2 |              4 |
+|  clk_IBUF_BUFG        | ADXL_Control/StC_Spi_Trans[9]_i_1_n_0          | RESET                                   |                2 |              5 |
+|  clk_IBUF_BUFG        | ADXL_Control/Cmd_Reg[1][6]_i_2_n_0             | ADXL_Control/Cmd_Reg[1]0_in[7]          |                2 |              5 |
+|  clk_IBUF_BUFG        |                                                | ADXL_Control/SPI_Interface/SCLK_2X_DIV0 |                1 |              6 |
+|  clk_IBUF_BUFG        | ADXL_Control/Cmd_Reg[2][6]_i_2_n_0             | ADXL_Control/Cmd_Reg[2][7]              |                2 |              6 |
+|  clk_IBUF_BUFG        | ADXL_Control/SPI_Interface/StC[7]_i_1_n_0      | RESET                                   |                3 |              6 |
+|  clk_IBUF_BUFG        | ADXL_Control/SPI_Interface/MOSI_REG[6]_i_1_n_0 |                                         |                1 |              6 |
+|  clk_IBUF_BUFG        | ADXL_Control/Shift_Cmd_Reg                     | RESET                                   |                2 |              7 |
+|  clk_IBUF_BUFG        | ADXL_Control/SPI_Interface/E[0]                | RESET                                   |                3 |              7 |
+|  clk_IBUF_BUFG        | ADXL_Control/SPI_Interface/SHIFT_TICK_IN       |                                         |                2 |              8 |
+|  clk_IBUF_BUFG        | ADXL_Control/SPI_Interface/EN_LOAD_DOUT        |                                         |                3 |              8 |
+|  clk_IBUF_BUFG        | ADXL_Control/Data_Ready_1                      | RESET                                   |                4 |              9 |
+|  clk_IBUF_BUFG        |                                                | ADXL_Control/Cnt_SS_Inactive0           |                4 |             10 |
+|  ADXL_Control/E[0]    |                                                | ADXL_Control/AR[6]                      |                4 |             10 |
+|  clk_IBUF_BUFG        | ADXL_Control/StC_Adxl_Ctrl[11]_i_1_n_0         | RESET                                   |                6 |             11 |
+|  clk_IBUF_BUFG        | ADXL_Control/CE_Cnt_Num_Reads                  | ADXL_Control/ACCEL_X_SUM0               |                4 |             16 |
+|  clk_IBUF_BUFG        |                                                | ADXL_Control/Reset_Sample_Rate_Div      |                5 |             20 |
+|  clk_IBUF_BUFG        | ADXL_Control/SPI_Interface/Shift_Data_Reg      |                                         |                7 |             26 |
+|  clk_IBUF_BUFG        |                                                |                                         |               11 |             30 |
++-----------------------+------------------------------------------------+-----------------------------------------+------------------+----------------+
+
+

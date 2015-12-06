@@ -3,7 +3,6 @@
     with args -log top_module.vdi -applog -m64 -messageDb vivado.pb -mode batch -source top_module.tcl -notrace
 
 WARNING: Default location for XILINX_VIVADO_HLS not found: 
-INFO: [Common 17-701] A license check has taken more than 10 seconds to complete. This may indicate that there is a performance issue with one or more license servers listed in XILINXD_LICENSE_FILE or LM_LICENSE_FILE, or that the license servers are just not responding at all. Try setting the FLEXLM_DIAGNOSTICS environment variable to 3 and running Vivado again to get more information.
 
 ****** Vivado v2015.2 (64-bit)
   **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
@@ -13,7 +12,7 @@ INFO: [Common 17-701] A license check has taken more than 10 seconds to complete
 source top_module.tcl -notrace
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2015.2
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
@@ -189,11 +188,10 @@ CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Nexys4_Master.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'SPI_If' instantiated as 'ADXL_Control/SPI_Interface' [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.srcs/sources_1/new/ADXL362Ctrl.vhd:373]
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 6 instances were transformed.
+  LDCP => LDCP (GND, LUT3, LUT3, LDCE, VCC): 6 instances
 
-link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 460.426 ; gain = 261.836
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
@@ -204,67 +202,493 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.099 . Memory (MB): peak = 463.672 ; gain = 3.246
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.092 . Memory (MB): peak = 464.980 ; gain = 3.664
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 
-WARNING: [Opt 31-155] Driverless net ADXL_Control/Done is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: ADXL_Control/Cnt_Bytes_Rec[2]_i_2
-WARNING: [Opt 31-155] Driverless net ADXL_Control/Dout[0] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: ADXL_Control/Data_Reg[0][0]_i_1
-WARNING: [Opt 31-155] Driverless net ADXL_Control/Done is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: ADXL_Control/Data_Reg[0][0]_i_1
-WARNING: [Opt 31-155] Driverless net ADXL_Control/Dout[7] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: ADXL_Control/Data_Reg[0][7]_i_1
-WARNING: [Opt 31-155] Driverless net ADXL_Control/Done is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: ADXL_Control/Data_Reg[0][7]_i_1
-WARNING: [Opt 31-155] Driverless net ADXL_Control/Done is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: ADXL_Control/StC_Spi_SendRec[3]_i_3
-WARNING: [Opt 31-155] Driverless net ADXL_Control/Done is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: ADXL_Control/StC_Spi_SendRec[3]_i_4
-WARNING: [Opt 31-155] Driverless net ADXL_Control/Done is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: ADXL_Control/StC_Spi_SendRec[2]_i_1
-WARNING: [Opt 31-155] Driverless net ADXL_Control/Done is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: ADXL_Control/StC_Spi_SendRec[4]_i_1
-WARNING: [Opt 31-155] Driverless net ADXL_Control/Done is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: ADXL_Control/StC_Spi_SendRec[4]_i_3
-WARNING: [Opt 31-155] Driverless net ADXL_Control/Done is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: ADXL_Control/StC_Spi_SendRec[6]_i_2
-WARNING: [Opt 31-155] Driverless net ADXL_Control/Done is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: ADXL_Control/StC_Spi_SendRec[6]_i_3
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 6 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 10f6194cc
+Phase 1 Retarget | Checksum: 1cd6684f6
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 951.000 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 951.539 ; gain = 0.000
 
 Phase 2 Constant Propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-10] Eliminated 18 cells.
-Phase 2 Constant Propagation | Checksum: 1e28f8f04
+INFO: [Opt 31-10] Eliminated 2 cells.
+Phase 2 Constant Propagation | Checksum: 13a9a605b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 951.000 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 951.539 ; gain = 0.000
 
 Phase 3 Sweep
-INFO: [Opt 31-12] Eliminated 18 unconnected nets.
-INFO: [Opt 31-11] Eliminated 2 unconnected cells.
-Phase 3 Sweep | Checksum: 9ae97873
+INFO: [Opt 31-12] Eliminated 28 unconnected nets.
+INFO: [Opt 31-11] Eliminated 0 unconnected cells.
+Phase 3 Sweep | Checksum: 187b2f4de
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 951.000 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 951.539 ; gain = 0.000
 
 Starting Connectivity Check Task
-ERROR: [Opt 31-30] Blackbox ADXL_Control/SPI_Interface (SPI_If) is driving pin I0 of primitive cell ADXL_Control/Cnt_Bytes_Rec[2]_i_2. This blackbox cannot be found in the existing library.
-Resolution: Please check the input design and ensure that the specific blackbox module is defined. Once the design is modified, then re-run the Vivado flow.
-ERROR: [Opt 31-30] Blackbox ADXL_Control/SPI_Interface (SPI_If) is driving pin I0 of primitive cell ADXL_Control/Data_Reg[0][0]_i_1. This blackbox cannot be found in the existing library.
-Resolution: Please check the input design and ensure that the specific blackbox module is defined. Once the design is modified, then re-run the Vivado flow.
-ERROR: [Opt 31-30] Blackbox ADXL_Control/SPI_Interface (SPI_If) is driving pin I0 of primitive cell ADXL_Control/Data_Reg[0][7]_i_1. This blackbox cannot be found in the existing library.
-Resolution: Please check the input design and ensure that the specific blackbox module is defined. Once the design is modified, then re-run the Vivado flow.
-ERROR: [Opt 31-30] Blackbox ADXL_Control/SPI_Interface (SPI_If) is driving pin I of primitive cell aclMOSI_OBUF_inst. This blackbox cannot be found in the existing library.
-Resolution: Please check the input design and ensure that the specific blackbox module is defined. Once the design is modified, then re-run the Vivado flow.
-ERROR: [Opt 31-30] Blackbox ADXL_Control/SPI_Interface (SPI_If) is driving pin I of primitive cell aclSCK_OBUF_inst. This blackbox cannot be found in the existing library.
-Resolution: Please check the input design and ensure that the specific blackbox module is defined. Once the design is modified, then re-run the Vivado flow.
-ERROR: [Opt 31-30] Blackbox ADXL_Control/SPI_Interface (SPI_If) is driving pin I of primitive cell aclSS_OBUF_inst. This blackbox cannot be found in the existing library.
-Resolution: Please check the input design and ensure that the specific blackbox module is defined. Once the design is modified, then re-run the Vivado flow.
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 951.000 ; gain = 0.000
-Implement Debug Cores | Checksum: 22201a99d
-Logic Optimization | Checksum: 22201a99d
-Ending Logic Optimization Task | Checksum: 9ae97873
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 951.539 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 187b2f4de
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 951.000 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 951.539 ; gain = 0.000
+Implement Debug Cores | Checksum: c2eba24c
+Logic Optimization | Checksum: c2eba24c
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 3.13 ns.
+Ending Power Optimization Task | Checksum: 187b2f4de
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 951.539 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-19 Infos, 68 Warnings, 57 Critical Warnings and 7 Errors encountered.
-opt_design failed
-ERROR: [Opt 31-236] Found primitives driven by Empty Hierarchy Cells/Black boxes.
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 03 10:21:34 2015...
+20 Infos, 56 Warnings, 56 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 951.539 ; gain = 490.223
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 951.539 ; gain = 0.000
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.runs/impl_1/top_module_drc_opted.rpt.
+INFO: [#UNDEF] Cannot write hardware definition file as there are no IPI block design hardware handoff files present
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Runtime Estimator
+Phase 1 Placer Runtime Estimator | Checksum: 14bf26874
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 951.539 ; gain = 0.000
+
+Phase 2 Placer Initialization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 951.539 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 951.539 ; gain = 0.000
+
+Phase 2.1 IO Placement/ Clock Placement/ Build Placer Device
+
+Phase 2.1.1 Pre-Place Cells
+Phase 2.1.1 Pre-Place Cells | Checksum: ec7f8988
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 951.539 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 2.1.2 IO & Clk Clean Up
+Phase 2.1.2 IO & Clk Clean Up | Checksum: ec7f8988
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 2.1.3 Implementation Feasibility check On IDelay
+Phase 2.1.3 Implementation Feasibility check On IDelay | Checksum: ec7f8988
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 2.1.4 Commit IO Placement
+Phase 2.1.4 Commit IO Placement | Checksum: a021a7c3
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 974.250 ; gain = 22.711
+Phase 2.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 122a90ece
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 2.2 Build Placer Netlist Model
+
+Phase 2.2.1 Place Init Design
+
+Phase 2.2.1.1 Init Lut Pin Assignment
+Phase 2.2.1.1 Init Lut Pin Assignment | Checksum: 1b2a4cba0
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 974.250 ; gain = 22.711
+Phase 2.2.1 Place Init Design | Checksum: 18aa0933b
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 974.250 ; gain = 22.711
+Phase 2.2 Build Placer Netlist Model | Checksum: 18aa0933b
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 2.3 Constrain Clocks/Macros
+
+Phase 2.3.1 Constrain Global/Regional Clocks
+Phase 2.3.1 Constrain Global/Regional Clocks | Checksum: 18aa0933b
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 974.250 ; gain = 22.711
+Phase 2.3 Constrain Clocks/Macros | Checksum: 18aa0933b
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 974.250 ; gain = 22.711
+Phase 2 Placer Initialization | Checksum: 18aa0933b
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 3 Global Placement
+Phase 3 Global Placement | Checksum: 1f8e8f8e3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 4 Detail Placement
+
+Phase 4.1 Commit Multi Column Macros
+Phase 4.1 Commit Multi Column Macros | Checksum: 1f8e8f8e3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 4.2 Commit Most Macros & LUTRAMs
+Phase 4.2 Commit Most Macros & LUTRAMs | Checksum: 2115edc37
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 4.3 Area Swap Optimization
+Phase 4.3 Area Swap Optimization | Checksum: 1f1df1546
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 4.4 updateClock Trees: DP
+Phase 4.4 updateClock Trees: DP | Checksum: 1f1df1546
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 4.5 Timing Path Optimizer
+Phase 4.5 Timing Path Optimizer | Checksum: 1ac5fab4c
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 4.6 Small Shape Detail Placement
+
+Phase 4.6.1 Commit Small Macros & Core Logic
+
+Phase 4.6.1.1 setBudgets
+Phase 4.6.1.1 setBudgets | Checksum: 1715c7eae
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 4.6.1.2 Commit Slice Clusters
+Phase 4.6.1.2 Commit Slice Clusters | Checksum: 1a6a3a6ea
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 974.250 ; gain = 22.711
+Phase 4.6.1 Commit Small Macros & Core Logic | Checksum: 1a6a3a6ea
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 4.6.2 Clock Restriction Legalization for Leaf Columns
+Phase 4.6.2 Clock Restriction Legalization for Leaf Columns | Checksum: 1a6a3a6ea
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 4.6.3 Clock Restriction Legalization for Non-Clock Pins
+Phase 4.6.3 Clock Restriction Legalization for Non-Clock Pins | Checksum: 1a6a3a6ea
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 974.250 ; gain = 22.711
+Phase 4.6 Small Shape Detail Placement | Checksum: 1a6a3a6ea
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 4.7 Re-assign LUT pins
+Phase 4.7 Re-assign LUT pins | Checksum: 1a6a3a6ea
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 974.250 ; gain = 22.711
+Phase 4 Detail Placement | Checksum: 1a6a3a6ea
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 5 Post Placement Optimization and Clean-Up
+
+Phase 5.1 PCOPT Shape updates
+Phase 5.1 PCOPT Shape updates | Checksum: 1db750cea
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 5.2 Post Commit Optimization
+
+Phase 5.2.1 updateClock Trees: PCOPT
+Phase 5.2.1 updateClock Trees: PCOPT | Checksum: 1db750cea
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 5.2.2 Post Placement Optimization
+
+Phase 5.2.2.1 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=5.444. For the most accurate timing information please run report_timing.
+Phase 5.2.2.1 Post Placement Timing Optimization | Checksum: 211317a16
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 974.250 ; gain = 22.711
+Phase 5.2.2 Post Placement Optimization | Checksum: 211317a16
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 974.250 ; gain = 22.711
+Phase 5.2 Post Commit Optimization | Checksum: 211317a16
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 5.3 Sweep Clock Roots: Post-Placement
+Phase 5.3 Sweep Clock Roots: Post-Placement | Checksum: 211317a16
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 5.4 Post Placement Cleanup
+Phase 5.4 Post Placement Cleanup | Checksum: 211317a16
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 5.5 Placer Reporting
+
+Phase 5.5.1 Restore STA
+Phase 5.5.1 Restore STA | Checksum: 211317a16
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 974.250 ; gain = 22.711
+Phase 5.5 Placer Reporting | Checksum: 211317a16
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 974.250 ; gain = 22.711
+
+Phase 5.6 Final Placement Cleanup
+Phase 5.6 Final Placement Cleanup | Checksum: 1c77b3908
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 974.250 ; gain = 22.711
+Phase 5 Post Placement Optimization and Clean-Up | Checksum: 1c77b3908
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 974.250 ; gain = 22.711
+Ending Placer Task | Checksum: d9ba8daa
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 974.250 ; gain = 22.711
+INFO: [Common 17-83] Releasing license: Implementation
+34 Infos, 56 Warnings, 56 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.107 . Memory (MB): peak = 974.250 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 974.250 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 974.250 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 974.250 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: c8d6be08
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:41 . Memory (MB): peak = 1077.543 ; gain = 103.293
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: c8d6be08
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:41 . Memory (MB): peak = 1079.172 ; gain = 104.922
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: c8d6be08
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:41 . Memory (MB): peak = 1086.652 ; gain = 112.402
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 238434489
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+INFO: [Route 35-57] Estimated Timing Summary | WNS=5.494  | TNS=0.000  | WHS=-0.149 | THS=-5.220 |
+
+Phase 2 Router Initialization | Checksum: 1c2f9262a
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: e72ed2e0
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 37
+ Number of Nodes with overlaps = 0
+
+Phase 4.1.1 Update Timing
+Phase 4.1.1 Update Timing | Checksum: 11326efd2
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+INFO: [Route 35-57] Estimated Timing Summary | WNS=4.833  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 110b73aaa
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+Phase 4 Rip-up And Reroute | Checksum: 110b73aaa
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 198be23b4
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+INFO: [Route 35-57] Estimated Timing Summary | WNS=4.913  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 198be23b4
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 198be23b4
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+Phase 5 Delay and Skew Optimization | Checksum: 198be23b4
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Update Timing
+Phase 6.1 Update Timing | Checksum: 126037a60
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+INFO: [Route 35-57] Estimated Timing Summary | WNS=4.913  | TNS=0.000  | WHS=0.130  | THS=0.000  |
+
+Phase 6 Post Hold Fix | Checksum: 1b31b8ebd
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.0877399 %
+  Global Horizontal Routing Utilization  = 0.0896562 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 19d60b1b7
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 19d60b1b7
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 18cd167d8
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=4.913  | TNS=0.000  | WHS=0.130  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 18cd167d8
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.895 ; gain = 120.645
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+47 Infos, 56 Warnings, 56 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:43 . Memory (MB): peak = 1094.895 ; gain = 120.645
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1094.895 ; gain = 0.000
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.runs/impl_1/top_module_drc_routed.rpt.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 05 22:26:46 2015...
+
+*** Running vivado
+    with args -log top_module.vdi -applog -m64 -messageDb vivado.pb -mode batch -source top_module.tcl -notrace
+
+WARNING: Default location for XILINX_VIVADO_HLS not found: 
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source top_module.tcl -notrace
+Command: open_checkpoint top_module_routed.dcp
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.runs/impl_1/.Xil/Vivado-14936-Timothy-Y40/dcp/top_module.xdc]
+Finished Parsing XDC File [C:/Users/Timothy/Documents/GitHub/Lightshow2.0/Final_Prj.runs/impl_1/.Xil/Vivado-14936-Timothy-Y40/dcp/top_module.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 451.539 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 451.539 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  LDCP => LDCP (inverted pins: D) (GND, LUT3, LUT3, LDCE, VCC): 6 instances
+
+INFO: [Project 1-484] Checkpoint was created with build 1266856
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-20] Rule violation (CFGBVS-1) Missing CFGBVS and CONFIG_VOLTAGE Design Properties - Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net ADXL_Control/E[0] is a gated clock net sourced by a combinational pin ADXL_Control/led_array_reg[15]_i_2/O, cell ADXL_Control/led_array_reg[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net led_array_reg[10]/G0 is a gated clock net sourced by a combinational pin led_array_reg[10]/L3_2/O, cell led_array_reg[10]/L3_2 (in led_array_reg[10] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net led_array_reg[11]/G0 is a gated clock net sourced by a combinational pin led_array_reg[11]/L3_2/O, cell led_array_reg[11]/L3_2 (in led_array_reg[11] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net led_array_reg[12]/G0 is a gated clock net sourced by a combinational pin led_array_reg[12]/L3_2/O, cell led_array_reg[12]/L3_2 (in led_array_reg[12] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net led_array_reg[13]/G0 is a gated clock net sourced by a combinational pin led_array_reg[13]/L3_2/O, cell led_array_reg[13]/L3_2 (in led_array_reg[13] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net led_array_reg[14]/G0 is a gated clock net sourced by a combinational pin led_array_reg[14]/L3_2/O, cell led_array_reg[14]/L3_2 (in led_array_reg[14] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net led_array_reg[9]/G0 is a gated clock net sourced by a combinational pin led_array_reg[9]/L3_2/O, cell led_array_reg[9]/L3_2 (in led_array_reg[9] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 8 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./top_module.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+write_bitstream: Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 798.348 ; gain = 346.809
+INFO: [Vivado_Tcl 4-395] Unable to parse hwdef file top_module.hwdef
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 05 22:27:31 2015...
